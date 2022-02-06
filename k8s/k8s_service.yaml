@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service                    # Type of kubernetes resource
+metadata:
+  name: go-filestore-app-service   # Name of the resource
+spec:
+  type: LoadBalancer                 # A port is opened on each node in your cluster via Kube proxy.
+  ports:                         # Take incoming HTTP requests on port 9090 and forward them to the targetPort of 8080
+  - name: http
+    port: 80
+    targetPort: 8080
+  selector:
+    app: go-filestore-app         # Map any pod with label `app=go-filestore-app` to this service

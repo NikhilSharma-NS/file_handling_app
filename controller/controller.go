@@ -13,6 +13,8 @@ func FileAppRouter() *mux.Router {
 	r.HandleFunc("/store", service.ListFiles).Methods(http.MethodGet)
 	r.HandleFunc("/store", service.UpdateFile).Methods(http.MethodPatch)
 	r.HandleFunc("/store", service.DeleteFile).Methods(http.MethodDelete)
+	r.HandleFunc("/readiness", service.Readynesscheck).Methods(http.MethodGet)
+	r.HandleFunc("/health", service.Healthcheck).Methods(http.MethodGet)
 
 	return r
 }

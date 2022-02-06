@@ -87,3 +87,11 @@ func DeleteFile(res http.ResponseWriter, req *http.Request) {
 	res.Write([]byte(filename))
 
 }
+
+func Readynesscheck(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+}
+
+func Healthcheck(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+}
