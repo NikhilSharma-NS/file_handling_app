@@ -129,6 +129,38 @@ Sample Response
 file.txt
 ```
 
+### Find word count of files from store
+
+Request : /store/wordcount
+Method: GET
+
+Response :
+
+```
+Status Code 200 
+Response word_count
+```
+
+```
+Status Code 500 
+Response errormsg
+```
+
+
+Sample Curl :
+```
+curl -X GET \
+  'http://localhost:8080/store/wordcount' \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: 10459757-ad92-4c61-a4af-2ed8acde507d' \
+```
+
+Sample Response 
+
+```
+3
+```
+
 #### Steps for Testing the app on local (I have used below steps )
 
 Step 1 : 

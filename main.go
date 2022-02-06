@@ -11,6 +11,7 @@ import (
 	"time"
 )
 
+// Entry of app
 func main() {
 	r := controller.FileAppRouter()
 	log.Println("Starting Server")
